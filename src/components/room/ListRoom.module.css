@@ -16,7 +16,7 @@
 .pageLink {
     display: block;
     padding: 0.375rem 0.75rem;
-    color: #ed5c66;
+    color: #1e8489;
     text-decoration: none;
     background-color: #fff;
     border: 1px solid #dee2e6;
@@ -25,7 +25,7 @@
 }
 
 .active, .pageLink:hover {
-    background-color: #ed5c66;
+    background-color: #1e8489;
     color: white;
 }
 
@@ -38,6 +38,6 @@
     padding: 6px 8px;
     width: 200px;
     font-size: 16px;
-    border: 1px solid #ed5c66;
+    border: 1px solid #1e8489;
     border-radius: 5px;
 }

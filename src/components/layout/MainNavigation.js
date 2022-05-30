@@ -16,22 +16,19 @@ const MainNavigation = (props) => {
     event.preventDefault();
     props.onHandleBackdrop();
   };
- 
-  const logoutHanlde = (event) => {
-     event.preventDefault();
-     authCtx.logout();
-     history.replace("/");
 
-  }
-   
+  const logoutHanlde = (event) => {
+    event.preventDefault();
+    authCtx.logout();
+    history.replace("/");
+  };
+
   const dropdownHandle = () => {
-    if(toggle.current.style.display === "none"){
+    if (toggle.current.style.display === "none") {
       toggle.current.style.display = "block";
-    }
-    else{
+    } else {
       toggle.current.style.display = "none";
     }
-    
   };
 
   return (
@@ -48,13 +45,18 @@ const MainNavigation = (props) => {
       <nav className={classes.nav}>
         <ul>
           <li>
+            <NavLink to="/request" activeClassName={classes.active}>
+              Request
+            </NavLink>
+          </li>
+          <li>
             <NavLink to="/properties" activeClassName={classes.active}>
               Properties for rent
             </NavLink>
           </li>
           <li>
-            <NavLink to="/properties" activeClassName={classes.active}>
-              How does it work
+            <NavLink to="/reservation" activeClassName={classes.active}>
+              My reservation
             </NavLink>
           </li>
           <li>
@@ -75,11 +77,18 @@ const MainNavigation = (props) => {
                 <button onClick={dropdownHandle} className={classes.dropbtn}>
                   Welcome, Thai Tang Luc
                 </button>
-                <div ref={toggle} id="myDropdown" className={classes.dropdownContent} style={{display:"none"}}>
+                <div
+                  ref={toggle}
+                  id="myDropdown"
+                  className={classes.dropdownContent}
+                  style={{ display: "none" }}
+                >
                   <NavLink to="/my_account">My Account</NavLink>
                   <NavLink to="/my_account/profile">Account settings</NavLink>
                   <NavLink to="/">Add listing</NavLink>
-                  <a href="#" onClick={logoutHanlde}>Logout</a>
+                  <a href="#" onClick={logoutHanlde}>
+                    Logout
+                  </a>
                 </div>
               </div>
             </li>

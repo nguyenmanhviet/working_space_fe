@@ -1,37 +1,14 @@
-import classes from './PersonalInformation.module.css';
+import classes from './BillingInformation.module.css';
 
-const PersonalInformation = () => {
+const BillingInformation = () => {
     return (
         <div className={classes.content}>
         <div className={classes.personInfo}>
-          <h3>Personal Information</h3>
+          <h3>Billing Information</h3>
           <div className={classes.control}>
-            <label for="name">Full name</label>
-            <input type="text" value="Nguyen Manh Viet" />
-          </div>
-          <div className={classes.control}>
-            <label for="username">Username</label>
-            <input type="text" value="thaitangluc" />
-          </div>
-          <div className={classes.control}>
-            <label for="email">Email address</label>
-            <input type="text" value="thidaihoc29012000@gmail.com" />
-          </div>
-          <div className={classes.control}>
-            <label for="phone">Phone number</label>
-            <input type="text" value="0772978470" />
-          </div>
-          <div className={classes.control}>
-            <label for="name">Identification</label>
-            <input type="text" value="201819506" />
-          </div>
-          <div className={classes.control}>
-            <label for="birthday">Birthday</label>
-            <input type="date" className={classes.birthday} name="birthday" />
-          </div>
-          <div className={classes.control}>
-            <label for="name">Nation</label>
-            <select name="nation" id="nation">
+            <label for="country">Country of domicile *</label>  
+            <select name="nation" id="nation" 
+             style={{border: "none", borderBottom: "1px solid #1e8489"}}>
               <option value="Afghanistan">Afghanistan</option>
               <option value="Albania">Albania</option>
               <option value="Algeria">Algeria</option>
@@ -317,7 +294,36 @@ const PersonalInformation = () => {
               <option value="Zimbabwe">Zimbabwe</option>
             </select>
           </div>
-          <p className={classes.message}>
+          <div className={classes.control}>
+            <label for="code">Fiscal code</label>
+            <input type="text" />
+          </div>
+          <div className={classes.control}>
+            <label for="firstname">First name *</label>
+            <input type="text" value="Viet"/>
+          </div>
+          <div className={classes.control}>
+            <label for="lastname">Last name *</label>
+            <input type="text" value="Nguyen Manh" />
+          </div>
+          <h3 style={{marginTop: "30px"}}>Billing address</h3>
+          <div className={classes.control}>
+            <label for="street">Street and Number *</label>
+            <input type="text" />
+          </div>
+          <div className={classes.control}>
+            <label for="province">Province *</label>
+            <input type="text" />
+          </div>
+          <div className={classes.control}>
+            <label for="city">City *</label>
+            <input type="text" />
+          </div>
+          <div className={classes.control}>
+            <label for="zipcode">Zip code *</label>
+            <input type="text" placeholder='Enter number'/>
+          </div>
+          {/* <p className={classes.message}>
             Roomless is relationship-based: make sure other people get to know
             you. 
             <br></br>
@@ -328,7 +334,7 @@ const PersonalInformation = () => {
             <br></br>Tell
             us what it is like to have you as a guest or host: what is your
             travel style?
-          </p>
+          </p> */}
           <div className={classes.btnContainer}>
             <button className={classes.btnRent}>
               Save
@@ -339,4 +345,4 @@ const PersonalInformation = () => {
     );
 }
 
-export default PersonalInformation;
+export default BillingInformation;

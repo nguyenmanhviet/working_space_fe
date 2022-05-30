@@ -199,10 +199,10 @@ const RoomPage = (props) => {
                 onSelect={(index) => setTabIndex(index)}
               >
                 <TabList>
-                  <Tab style={{ color: "#ed5c66" }}>
+                  <Tab style={{ color: "#1e8489" }}>
                     <MdMeetingRoom /> Rooms
                   </Tab>
-                  <Tab style={{ color: "#ed5c66" }}>
+                  <Tab style={{ color: "#1e8489" }}>
                     <MdOutlineRateReview /> Reviews
                   </Tab>
                 </TabList>

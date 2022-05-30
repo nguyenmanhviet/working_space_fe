@@ -70,7 +70,7 @@
 }
 
 .titleContent {
-    color: #ed5c66 !important;
+    color: #1e8489 !important;
 
 }
 
@@ -81,7 +81,7 @@
 
 .content h4 {
     margin: 10px 0;
-    color: #ed5c66;
+    color: #1e8489;
     font-weight: 750;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     background-color: white;
@@ -98,7 +98,7 @@
 
 
 .icon {
-    color: #ed5c66;
+    color: #1e8489;
     width: 20px;
 }
 
@@ -106,10 +106,10 @@
     width: 100%;
     padding: 12px 10px;
     color:white;
-    background-color: #ed5c66;
+    background-color: #1e8489;
     border: none;
     border-radius: 10px 25px 10px 25px;
-    box-shadow: 0 2px 8px #ed5c66;
+    box-shadow: 0 2px 8px #1e8489;
     font-size: 17px;
     animation: emerging 1s linear infinite both;
     cursor: pointer;
@@ -122,10 +122,10 @@
 
 @keyframes emerging {
     from {
-      box-shadow: 0 2px 2px #ed5c66;
+      box-shadow: 0 2px 2px #1e8489;
     }
     to {
-      box-shadow: 0 2px 20px #ed5c66;
+      box-shadow: 0 2px 20px #1e8489;
     }
   }
 
@@ -139,7 +139,7 @@
 }
 
 .tabListCustome{
-    color: #ed5c66;
+    color: #1e8489;
 }
 
 .rec.rec-arrow {

@@ -34,7 +34,7 @@
   
   .modal__header h3 {
     margin: 20px;
-    color: #ed5c66;
+    color: #1e8489;
   }
   
   .close {
@@ -113,3 +113,44 @@
     font-size: 16px;
   }
   
+  .rentInfo p {
+    color: #333;
+    font-size: 17px;
+  }
+
+  .rentInfo p span {
+    color: #1e8489;
+    margin-right: 10px;
+  }
+
+  .btnContainer{
+    margin-top: 15px;
+    text-align: center;
+  }
+  
+  .btnRent{
+    width: 300px;
+    padding: 10px;
+    font-weight: 750;
+    font-size: 20px;
+    color: white;
+    background-color: #1e8489;
+    border: none;
+    border-radius: 15px;
+    animation: bubbles 1s linear infinite both;
+    cursor: pointer;
+  }
+  
+  .btnRent:hover{
+    background-color: #1e8489;
+  }
+  
+  @keyframes bubbles {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(10, 226, 82, 0.26);
+    }
+  }

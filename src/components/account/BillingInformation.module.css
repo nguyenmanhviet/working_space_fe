@@ -12,6 +12,7 @@
   .personInfo h3 {
     color: #1e8489;
     margin: 0;
+    
     margin-bottom: 30px;
   }
   
@@ -26,9 +27,9 @@
   .control label {
     /* border: 1px solid black; */
     display: block;
-    width: 150px;
+    width: 200px;
     font-weight: 500;
-    color: #333;
+    color: #224251;
     padding: 10px 0px;
   }
   
@@ -78,3 +79,7 @@
     background-color: #47a5aa;
   }
   
+
+  .type {
+    border: 1px solid black;
+  }

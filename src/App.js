@@ -4,7 +4,7 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 import PropertiesPage from './components/properties/ProperitesPage';
 import RoomPage from './components/room/RoomPage';
 import SingleRoomPage from './components/room/SingleRoomPage';
-import NewQuote from './pages/NewQuote';
+import RequestRent from './components/request/RequestRent';
 import NotFound from './pages/NotFound';
 import Layout from './components/layout/Layout';
 import Home from './components/home/Home';
@@ -19,10 +19,14 @@ import ModalRent from './components/modal/ModalRent';
 import ModalPayment from './components/modal/ModalPayment';
 import MyAccount from './components/account/MyAccount';
 import AccountSetting from './components/account/AccountSetting';
+import ReservationRequest from './components/request/ReservationRequest';
+import MyReservation from './components/request/MyReservation';
+import ReservationDetail from './components/request/ReservationDetail';
 
 function App() {
   const authCtx = useContext(AuthContext);
   const [room, setRoom] = useState({});
+  const [reservation, setReservation] = useState({});
   const [isPaying, setPay] = useState(false);
   const [isBackdrop, setBackdrop] = useState(false);
   const [isFormLogin, setFormLogin] = useState(false);
@@ -45,7 +49,8 @@ function App() {
     setPay(false);
   }
 
-  const onActiveModalPayment = () => {
+  const onActiveModalPayment = (input_reservation) => {
+    setReservation(input_reservation);
     setModalRent(false);
     setPay(true);
     if(authCtx.isLoggedIn){
@@ -139,7 +144,7 @@ function App() {
     {isModalFilter && <ModalFilter onExitModalFilter={onExitModalFilter}/>}
     {isModalRoom && <ModalRoom onExitModalRoom={onExitModalRoom} room={room} onActiveModalRent={onActiveModalRent}/>}
     {isModalRent && <ModalRent onExitModalRent={onExitModalRent} room={room} onActiveModalPayment={onActiveModalPayment}/>}
-    {isModalPayment && <ModalPayment onExitModalPayment={onExitModalPayment} room={room}/>}
+    {isModalPayment && <ModalPayment onExitModalPayment={onExitModalPayment} reservation={reservation}/>}
     <Layout onBackdrop={onActiveLogin}>
       <Switch>
         <Route path='/' exact>
@@ -156,6 +161,18 @@ function App() {
         </Route>
         <Route path='/my_account/profile'>
            <AccountSetting />
+        </Route>
+        <Route path='/request' exact>
+           <RequestRent />
+        </Route>
+        <Route path='/request/:reservationId/reservation'>
+          <ReservationRequest/>
+        </Route>
+        <Route path='/reservation' exact>
+           <MyReservation />
+        </Route>
+        <Route path='/reservation/:reservationId'>
+           <ReservationDetail />
         </Route>
         <Route path='/my_account'>
           {authCtx.isLoggedIn && <MyAccount />}

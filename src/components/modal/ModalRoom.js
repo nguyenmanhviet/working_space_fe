@@ -39,10 +39,10 @@ const ModalRoom = (props) => {
         ></div>
         <Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
           <TabList>
-            <Tab style={{ color: "#ed5c66" }}>
+            <Tab style={{ color: "#1e8489" }}>
               <IoDocumentTextOutline /> Details
             </Tab>
-            <Tab style={{ color: "#ed5c66" }}>
+            <Tab style={{ color: "#1e8489" }}>
               <IoLogoRss /> Utilities
             </Tab>
           </TabList>

@@ -32,7 +32,7 @@
     padding: 10px 0px;
   }
   
-  .control input, select {
+  .control input{
     width: 80%;
     border: 1px solid #ced4da;
     padding: 10px 10px;
@@ -41,20 +41,9 @@
     font-size: 1rem;
   }
   
-  .control input:focus, select:focus{
+  .control input:focus{
     outline-color: rgb(187, 235, 235);
   }
-  
-  .birthday{
-    width: fit-content;
-  }
-  
-  .message{
-    margin-left: 150px;
-    margin-top: 5px;
-    font-size: .8em;
-  }
-  
   .btnContainer{
     margin-top: 20px;
     text-align: right;

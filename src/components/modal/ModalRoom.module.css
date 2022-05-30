@@ -34,7 +34,7 @@
 
 .modal__header h3{
   margin: 20px;
-  color: #ed5c66;
+  color: #1e8489;
 }
 
 .close {
@@ -136,7 +136,7 @@
   font-weight: 750;
   font-size: 20px;
   color: white;
-  background-color: #ed5c66;
+  background-color: #1e8489;
   border: none;
   border-radius: 15px;
   animation: bubbles 1s linear infinite both;
@@ -144,7 +144,7 @@
 }
 
 .btnRent:hover{
-  background-color: #cd4b54;
+  background-color: #1e8489;
 }
 
 @keyframes bubbles {
